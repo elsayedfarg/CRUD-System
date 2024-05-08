@@ -1,0 +1,113 @@
+/* general style */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.crud {
+    width: 80%;
+    margin: auto;
+}
+
+/* header style */
+
+.header-content {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header-content .header-paragraph {
+    font-size: 25px;
+}
+
+/* inputs style */
+
+input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #111;
+    margin: 4px 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+input:focus {
+    background-color: rgb(61, 66, 46);
+    transform: scale(1.080);
+}
+
+.inputs .price input {
+    width: 20%;
+    margin-right: 10px;
+}
+
+.inputs .price #total {
+    background-color: rgb(170, 71, 71);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.inputs .price #total::before {
+    content: 'Total : '
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+    background-color: rgb(53, 112, 110);
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin: 8px 0;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgb(61, 66, 46);
+    letter-spacing: 1px;
+}
+
+/* outputs style [search] */
+
+.outputs .search-content .search-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outputs .search-content button {
+    width: 45%;
+}
+
+/* outputs style [table] */
+
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+table tr th{
+    text-transform: uppercase;
+}
+
+table tr th ,table tr td{
+    padding: 5px;
+}

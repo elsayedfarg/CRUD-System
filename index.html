@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="crud">
+
+        <header class="header-content">
+            <h1 class="header-title">cruds</h1>
+            <p class="header-paragraph">product management system</p>
+        </header><!-- /header -->
+
+        <main>
+            <section class="inputs">
+                <input placeholder="title" type="text" id="title">
+                <div class="price">
+                    <input onkeyup="ComputeTotalPrice()" placeholder="price" type="number" id="price">
+                    <input onkeyup="ComputeTotalPrice()" placeholder="taxes" type="number" id="taxes">
+                    <input onkeyup="ComputeTotalPrice()" placeholder="ads" type="number" id="ads">
+                    <input onkeyup="ComputeTotalPrice()" placeholder="discount" type="number" id="discount">
+                    <small id="total">0</small>
+                </div><!-- /price -->
+                <input placeholder="count" type="number" id="count">
+                <input placeholder="category" type="text" id="category">
+                <button id="submit">Create</button>
+            </section><!-- /inputs -->
+
+            <section class="outputs">
+                <div class="search-content">
+                    <input onkeyup="searchForProduct(this.value)" placeholder="search" type="text" id="search">
+                    <div class="search-buttons">
+                        <button onclick="getSearchMode(this.id)" id="title-search-btn">search by title</button>
+                        <button onclick="getSearchMode(this.id)" id="category-search-btn">search by category</button>
+                    </div><!-- /search-buttons -->
+                </div><!-- /search-content -->
+
+                <div id="delete-all">
+
+                </div><!-- /delete-all -->
+
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </section><!-- /outputs -->
+
+
+        </main><!-- /main -->
+
+    </div><!-- /crud -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
